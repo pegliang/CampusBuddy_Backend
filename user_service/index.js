@@ -11,6 +11,9 @@ const loginRoute = require("./routes/loginRoute");
 
 const app = express();
 const PORT = process.env.USER_SERVICE_PORT || 4001;
+app.listen(PORT, () => {
+    console.log('User Service listening on port', PORT);
+});
 
 // dev only: allow access from anywhere
 // production only: only allow access from the gateway host
